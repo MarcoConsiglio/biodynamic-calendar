@@ -27579,7 +27579,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  setup: function setup() {}
+  props: {
+    dayOfMonth: Number,
+    dayOfWeek: String
+  }
 });
 
 /***/ }),
@@ -29003,7 +29006,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Layout, null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Day_Of_Month)];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Day_Of_Month, {
+        dayOfMonth: "12",
+        dayOfWeek: "Mar"
+      })];
     }),
     _: 1
     /* STABLE */
@@ -29029,22 +29035,18 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "day-of-month-rectangle flex flex-col"
 };
-
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_2 = {
   "class": "day-of-the-month grow"
-}, "1", -1
-/* HOISTED */
-);
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+};
+var _hoisted_3 = {
   "class": "day-of-the-week grow"
-}, "LUN", -1
-/* HOISTED */
-);
-
-var _hoisted_4 = [_hoisted_2, _hoisted_3];
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_4);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.dayOfMonth), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.dayOfWeek), 1
+  /* TEXT */
+  )]);
 }
 
 /***/ }),
@@ -34210,7 +34212,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_fonts_Bernard_MT_Condensed_ttf__WEBPACK_IMPORTED_MODULE_2__["default"]);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_fonts_Lato_Bold_ttf__WEBPACK_IMPORTED_MODULE_3__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n:root {\n    --text-color: #595c6e;\n}\n@font-face {\n    font-family: 'Bernard MT';\n    src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"truetype\");\n}\n@font-face {\n    font-family: 'Lato';\n    src: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"truetype\");\n    font-weight: bold;\n}\n.day-of-month-rectangle {\n    height: 81px;\n    width: 73px;\n    border-bottom-width: 2px;\n    border-bottom-color: #e8e8e8;\n}\n.day-of-the-month {\n    font-family: 'Bernard MT';\n    font-size: 57px;\n    height: 63px;\n    line-height: normal;\n    text-align: center;\n    color: var(--text-color);\n}\n.day-of-the-week {\n    font-family: \"Lato\";\n    font-weight: bold;\n    font-size: 18px;\n    text-align: center;\n    width: 73px;\n    height: 18px;\n    line-height: normal;\n    color: var(--text-color);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n:root {\n    --text-color: #595c6e;\n}\n@font-face {\n    font-family: 'Bernard MT';\n    src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"truetype\");\n}\n@font-face {\n    font-family: 'Lato';\n    src: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"truetype\");\n    font-weight: bold;\n}\n.day-of-month-rectangle {\n    width: 73px;\n    border-bottom-width: 2px;\n    border-bottom-color: #e8e8e8;\n}\n.day-of-the-month {\n    font-family: 'Bernard MT';\n    font-size: 53px;\n    line-height: normal;\n    text-align: center;\n    color: var(--text-color);\n    text-transform: uppercase;\n}\n.day-of-the-week {\n    font-family: \"Lato\";\n    font-weight: bold;\n    font-size: 18px;\n    text-align: center;\n    height: 18px;\n    line-height: 18px;\n    color: var(--text-color);\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

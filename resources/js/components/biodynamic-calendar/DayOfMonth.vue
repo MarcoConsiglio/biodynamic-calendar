@@ -1,15 +1,16 @@
 <template>
     <div class="day-of-month-rectangle flex flex-col">
-        <div class="day-of-the-month grow">1</div>
-        <div class="day-of-the-week grow">LUN</div>
+        <div class="day-of-the-month grow">{{ this.dayOfMonth }}</div>
+        <div class="day-of-the-week grow">{{ this.dayOfWeek }}</div>
     </div>
 </template>
 
 <script>
 export default {
-    setup() {
-        
-    },
+    props: {
+        dayOfMonth: Number,
+        dayOfWeek: String
+    }
 }
 </script>
 
@@ -30,7 +31,6 @@ export default {
 }
 
 .day-of-month-rectangle {
-    height: 81px;
     width: 73px;
     border-bottom-width: 2px;
     border-bottom-color: #e8e8e8;
@@ -38,11 +38,11 @@ export default {
 
 .day-of-the-month {
     font-family: 'Bernard MT';
-    font-size: 57px;
-    height: 63px;
+    font-size: 53px;
     line-height: normal;
     text-align: center;
     color: var(--text-color);
+    text-transform: uppercase;
 }
 
 .day-of-the-week {
@@ -50,9 +50,8 @@ export default {
     font-weight: bold;
     font-size: 18px;
     text-align: center;
-    width: 73px;
     height: 18px;
-    line-height: normal;
+    line-height: 18px;
     color: var(--text-color);
 }
 </style>
