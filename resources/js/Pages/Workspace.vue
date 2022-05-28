@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <MonthCalendar start="2022-05-01" end="2022-05-31"></MonthCalendar>
+        <MonthCalendar start="2022-05-01"></MonthCalendar>
         <!-- <DayOfMonth date="2022-05-28"></DayOfMonth>
         <DayOfMonth date="2022-05-29"></DayOfMonth>
         <DayOfMonth date="2022-05-30"></DayOfMonth> -->

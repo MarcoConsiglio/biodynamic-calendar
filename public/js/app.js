@@ -27636,32 +27636,16 @@ __webpack_require__.r(__webpack_exports__);
     start: {
       type: String,
       required: true
-    },
-    // The ending day of this month.
-    end: {
-      type: String,
-      required: true
     }
   },
-  // data() {
-  //     return {
-  //         startDay: this.start,
-  //         endDay: this.end
-  //     }
-  // },
   computed: {
     days: function days() {
-      // var list = []
-      var currentMonthDates = new Array(dayjs__WEBPACK_IMPORTED_MODULE_0___default()(this.start).daysInMonth()).fill(null).map(function (x, i) {
+      return new Array( // How many days are in this month?
+      // That should be the array length.
+      dayjs__WEBPACK_IMPORTED_MODULE_0___default()(this.start).daysInMonth()).fill(null).map( // Start adding day by day to the array
+      function (x, i) {
         return dayjs__WEBPACK_IMPORTED_MODULE_0___default()().startOf('month').add(i, 'days');
-      }); // var currentDay = Dayjs(this.start)
-      // var endDay = Dayjs(this.end)
-      // while (currentDay.isSameOrBefore(endDay)) {
-      //     list.push(currentDay.clone().format('YYYY-MM-DD'))
-      //     currentDay.add(1, 'day')
-      // }
-
-      return currentMonthDates;
+      });
     }
   }
 });
@@ -28284,13 +28268,10 @@ var _hoisted_1 = {
   "class": "flex flex-col sm:justify-center items-center sm:pt-0"
 };
 var _hoisted_2 = {
-  "class": "w-full px-4 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg"
-};
-var _hoisted_3 = {
-  "class": "my-3"
+  "class": "w-full bg-white shadow-md overflow-hidden sm:rounded-lg"
 };
 function render(_ctx, _cache) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])])]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])]);
 }
 
 /***/ }),
@@ -29088,8 +29069,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Layout, null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MonthCalendar, {
-        start: "2022-05-01",
-        end: "2022-05-31"
+        start: "2022-05-01"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <DayOfMonth date=\"2022-05-28\"></DayOfMonth>\n        <DayOfMonth date=\"2022-05-29\"></DayOfMonth>\n        <DayOfMonth date=\"2022-05-30\"></DayOfMonth> ")];
     }),
     _: 1
@@ -29164,7 +29144,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.days, function (day) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_DayOfMonth, {
       key: day,
-      date: day
+      date: day.format()
     }, null, 8
     /* PROPS */
     , ["date"]);

@@ -1,6 +1,6 @@
 <template>
     <div class="month-calendar-rectangle flex flex-col justify-center">
-        <DayOfMonth v-for="day in days" :key="day" :date="day">
+        <DayOfMonth v-for="day in days" :key="day" :date="day.format()">
         </DayOfMonth>
     </div>
 </template>
@@ -18,19 +18,8 @@ export default {
         start: {
             type: String,
             required: true
-        },
-        // The ending day of this month.
-        end: {
-            type: String,
-            required: true
         }
     },
-    // data() {
-    //     return {
-    //         startDay: this.start,
-    //         endDay: this.end
-    //     }
-    // },
     computed: {
         days() {
             return new Array(
