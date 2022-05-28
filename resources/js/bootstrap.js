@@ -30,3 +30,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/**
+ * DayJS Library
+ */
+window.dayjs = require('dayjs')
+var isSameOrBefore = require('dayjs/plugin/isSameOrBefore')
+dayjs.extend(isSameOrBefore)
+// var calendar = require('dayjs/plugin/calendar')
+// dayjs.extend(calendar)
+var locale = require('dayjs/plugin/localeData')
+dayjs.extend(locale)
+// var arraySupport = require('dayjs/plugin/arraySupport')
+// dayjs.extend(arraySupport)
+var itLocale = require('dayjs/locale/it')
+dayjs.locale(itLocale)
+

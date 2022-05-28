@@ -1,20 +1,31 @@
 <template>
     <div class="day-of-month-rectangle flex flex-col">
-        <div class="day-of-the-month grow">{{ this.dayOfMonth }}</div>
-        <div class="day-of-the-week grow">{{ this.dayOfWeek }}</div>
+        <div class="day-of-the-month grow">{{ monthDay }}</div>
+        <div class="day-of-the-week grow">{{ weekDay }}</div>
     </div>
 </template>
 
 <script>
+import Dayjs from 'dayjs'
 export default {
     props: {
-        dayOfMonth: Number,
-        dayOfWeek: String
+        date: {
+            type: String,
+            required: true
+        }
+    },
+    computed: {
+        monthDay() {
+            return Dayjs(this.date).format('D')
+        },
+        weekDay() {
+            return Dayjs(this.date).format('ddd')
+        }
     }
 }
 </script>
 
-<style>
+<style scoped>
 :root {
     --text-color: #595c6e;
 }
@@ -50,9 +61,16 @@ export default {
     font-weight: bold;
     font-size: 18px;
     text-align: center;
+    text-transform: uppercase;
     height: 18px;
     line-height: 18px;
     color: var(--text-color);
 }
 </style>
+
+<!--
+Example usage
+
+<Day-Of-Month :dayOfMonth="12" dayOfWeek="Mar"></Day-Of-Month>
+-->
 
