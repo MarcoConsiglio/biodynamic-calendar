@@ -1,17 +1,22 @@
 <template>
-    <div class="month-calendar-rectangle flex flex-col justify-center">
-        <DayOfMonth v-for="day in days" :key="day" :date="day.format()">
-        </DayOfMonth>
+    <div>
+        <MonthHeader :date="this.start"></MonthHeader>
+        <div class="month-calendar-rectangle flex flex-col justify-center">
+            <DayOfMonth v-for="day in days" :key="day" :date="day.format()">
+            </DayOfMonth>
+        </div>
     </div>
 </template>
 
 <script>
 import Dayjs from 'dayjs'
 import DayOfMonth from './DayOfMonth.vue'
+import MonthHeader from './MonthHeader.vue'
 import dayjs from 'dayjs';
 export default {
     components: {
-        DayOfMonth
+        DayOfMonth,
+        MonthHeader
     },
     props: {
         // The starting day of this month.

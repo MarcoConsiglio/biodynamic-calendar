@@ -26,9 +26,9 @@ export default {
 </script>
 
 <style scoped>
-:root {
+/* :root {
     --text-color: #595c6e;
-}
+} */
 
 @font-face {
     font-family: 'Bernard MT';
