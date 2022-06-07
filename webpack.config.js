@@ -6,4 +6,12 @@ module.exports = {
             '@': path.resolve('resources/js'),
         },
     },
+    module: {
+        rules: [
+            {
+                test: /\.svg$/,
+                use: ['babel-loader', 'vue-svg-loader'],
+            }
+        ]
+    }
 };
