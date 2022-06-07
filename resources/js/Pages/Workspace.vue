@@ -1,17 +1,17 @@
 <template>
     <Layout>
-        <MoonIllumination/>
+        <ThirdQuarter/>
     </Layout>
 </template>
 
 <script>
 import Dayjs from 'dayjs'
 import Layout from '../Layouts/Standard.vue'
-import MoonIllumination from '../components/biodynamic-calendar/MoonIllumination.vue'
+import ThirdQuarter from '../components/biodynamic-calendar/Moon/ThirdQuarter.vue'
 export default {
     components: {
         Layout,
-        MoonIllumination
+        ThirdQuarter
     },
     methods: {
         date(dateString) {
