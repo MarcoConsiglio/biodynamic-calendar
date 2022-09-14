@@ -14,13 +14,14 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .vue()
     .copyDirectory('resources/fonts', 'public/fonts')
+    .copyDirectory('resources/images', 'public/images')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
         require('autoprefixer'),
     ])
     .webpackConfig(require('./webpack.config'))
-    .browserSync('biodynamic-calendar.test');
+    .browserSync('biodynamic-calendar.test',);
 
 if (mix.inProduction()) {
     mix.version();

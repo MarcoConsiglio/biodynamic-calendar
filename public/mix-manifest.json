@@ -14,5 +14,10 @@
     "/fonts/Lato-Italic.ttf": "/fonts/Lato-Italic.ttf",
     "/fonts/Lato-Light.ttf": "/fonts/Lato-Light.ttf",
     "/fonts/Lato-LightItalic.ttf": "/fonts/Lato-LightItalic.ttf",
-    "/fonts/Lato-Regular.ttf": "/fonts/Lato-Regular.ttf"
+    "/fonts/Lato-Regular.ttf": "/fonts/Lato-Regular.ttf",
+    "/images/MoonIllumination.svg": "/images/MoonIllumination.svg",
+    "/images/first_quarter.png": "/images/first_quarter.png",
+    "/images/full_moon.png": "/images/full_moon.png",
+    "/images/new_moon.png": "/images/new_moon.png",
+    "/images/third_quarter.png": "/images/third_quarter.png"
 }
