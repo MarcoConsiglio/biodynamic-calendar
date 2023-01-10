@@ -1,5 +1,16 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="2368.748" viewBox="0 0 55 2368.748">
-        <path d="M1625,2960.75c0-454.2,27.5-943.771,27.5-1184.374,0-233.181-27.5-710.611-27.5-1184.374h55c0,481.166-27.5,936.284-27.5,1184.374S1680,2490.568,1680,2960.75Z" transform="translate(-1625 -592.002)" fill="#c2eeff"/>
-    </svg>
+    <img src="../../../../../resources/images/moon_illumination.png" :style="style" />
 </template>
+
+<script>
+export default {
+    data () {
+        return {
+            style: {
+                height: "2044px",
+                width: "57px"
+            }
+        }
+    }
+}
+</script>
