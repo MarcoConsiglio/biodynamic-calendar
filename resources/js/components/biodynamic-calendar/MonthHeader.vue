@@ -1,19 +1,28 @@
 <template>
-    <div class="month-header-space"></div>
-    <div class="month-header flex justify-center drop-shadow-lg fixed top-0 left-0 right-0">
-        <span class="month-name">{{ monthName }}</span>
+    <div>
+        <div class="month-header-space"></div>
+        <div class="month-header flex justify-center drop-shadow-lg fixed top-0 left-0 right-0">
+            <span class="month-name">{{ monthName }}</span>
+        </div>
     </div>
 </template>
 
 <script>
+import dayjs from 'dayjs'
 export default {
     props: {
+        /**
+         * The date to extract the month name from.
+         */
         date: {
             type: String,
             required: true
         }
     },
     computed: {
+        /**
+         * Extracts the month name from a date.
+         */
         monthName() {
             return dayjs(this.date).format('MMMM')
         }

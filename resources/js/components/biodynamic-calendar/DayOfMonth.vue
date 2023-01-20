@@ -6,18 +6,31 @@
 </template>
 
 <script>
+/**
+ * A day of a month.
+ * @displayName Day of the month
+ */
 import Dayjs from 'dayjs'
 export default {
     props: {
+        /**
+         * The date that the component will show as the day of the month
+         */
         date: {
             type: String,
             required: true
         }
     },
     computed: {
+        /**
+         * Format the date as a day of the month.
+         */
         monthDay() {
             return Dayjs(this.date).format('D')
         },
+        /**
+         * Format the date as a day of the week.
+         */
         weekDay() {
             return Dayjs(this.date).format('ddd')
         }

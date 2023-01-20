@@ -12,19 +12,23 @@
 import Dayjs from 'dayjs'
 export default {
     props: {
+        /**
+         * The moon phase type.
+         * @values new_moon, first_quarter, full_moon, third_quarter
+         */
         type: { // Which moon phase is.
             type: String,
             required: true,
             validator(value) {
                 return [
-                    'new_moon', 
+                    'new_moon',
                     'first_quarter',
                     'full_moon',
-                    'third_quarter'    
+                    'third_quarter'
                 ]
             }
         },
-        timestamp: {
+        timestamp: { // The phase timestamp.
             type: String,
             required: true
         }
@@ -35,7 +39,7 @@ export default {
         }
     },
     computed: {
-        time() {
+        time() { // The time when the phenomenon occurs
             return Dayjs(this.timestamp).format('H')
         }
     }

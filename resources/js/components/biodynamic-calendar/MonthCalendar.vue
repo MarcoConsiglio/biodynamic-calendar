@@ -9,7 +9,10 @@
 </template>
 
 <script>
-import Dayjs from 'dayjs'
+/**
+ * The calendar of a specific month.
+ * @displayName Month calendar
+ */
 import DayOfMonth from './DayOfMonth.vue'
 import MonthHeader from './MonthHeader.vue'
 import dayjs from 'dayjs';
@@ -19,13 +22,18 @@ export default {
         MonthHeader
     },
     props: {
-        // The starting day of this month.
+        /**
+         * The date of the first day of the month.
+         */
         start: {
             type: String,
             required: true
         }
     },
     computed: {
+        /**
+         * Gets a list of all dates (days) of the month.
+         */
         days() {
             return new Array(
                 // How many days are in this month?

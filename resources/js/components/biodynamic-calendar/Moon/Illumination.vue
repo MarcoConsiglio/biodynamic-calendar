@@ -1,5 +1,9 @@
 <template>
-    <img src="../../../../../resources/images/moon_illumination.png" :style="style" />
+    <div>
+        <img src="../../../../../resources/images/moon_illumination.png" :style="style" />
+        <!-- @slot Place here content related to the sinodyc rhythm of the Moon -->
+        <slot></slot>
+    </div>
 </template>
 
 <script>
