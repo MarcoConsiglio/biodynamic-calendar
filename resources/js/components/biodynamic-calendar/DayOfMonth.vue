@@ -8,7 +8,6 @@
 <script>
 /**
  * A day of a month.
- * @displayName Day of the month
  */
 import Dayjs from 'dayjs'
 export default {

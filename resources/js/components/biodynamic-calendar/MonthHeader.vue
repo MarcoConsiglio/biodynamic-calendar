@@ -9,6 +9,9 @@
 
 <script>
 import dayjs from 'dayjs'
+/**
+ * The header of the current month.
+ */
 export default {
     props: {
         /**

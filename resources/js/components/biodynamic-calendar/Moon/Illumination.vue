@@ -1,12 +1,18 @@
 <template>
-    <div>
-        <img src="../../../../../resources/images/moon_illumination.png" :style="style" />
-        <!-- @slot Place here content related to the sinodyc rhythm of the Moon -->
-        <slot></slot>
+    <div :style="style">
+        <img src="../../../../../resources/images/moon_illumination.png" :style="style"
+            class="absolute"/>
+        <div class="flex flex-col moon-phases">
+            <!-- @slot Place here content related to the sinodyc rhythm of the Moon -->
+            <slot></slot>
+        </div>
     </div>
 </template>
 
 <script>
+/**
+ * Represents the illumination of the Moon.
+ */
 export default {
     data () {
         return {
@@ -18,3 +24,10 @@ export default {
     }
 }
 </script>
+
+<style>
+.moon-phases > div {
+    z-index: 0;
+    position: relative
+}
+</style>

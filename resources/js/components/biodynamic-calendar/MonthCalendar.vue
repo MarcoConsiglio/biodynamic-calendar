@@ -11,7 +11,8 @@
 <script>
 /**
  * The calendar of a specific month.
- * @displayName Month calendar
+ * @requires './DayOfMonth.vue'
+ * @requires './MonthHeader.vue'
  */
 import DayOfMonth from './DayOfMonth.vue'
 import MonthHeader from './MonthHeader.vue'

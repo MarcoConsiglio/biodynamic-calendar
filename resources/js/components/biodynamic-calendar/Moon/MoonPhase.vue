@@ -1,22 +1,25 @@
 <template>
     <div style="width:55px" class="flex flex-col">
-        <img v-if="moon_phase == 'new_moon'"      src="images/new_moon.png">
-        <img v-if="moon_phase == 'first_quarter'" src="images/first_quarter.png">
-        <img v-if="moon_phase == 'full_moon'"     src="images/full_moon.png">
-        <img v-if="moon_phase == 'third_quarter'" src="images/third_quarter.png">
+        <img v-if="moon_phase == 'new_moon'"      src="../../../../images/new_moon.png">
+        <img v-if="moon_phase == 'first_quarter'" src="../../../../images/first_quarter.png">
+        <img v-if="moon_phase == 'full_moon'"     src="../../../../images/full_moon.png">
+        <img v-if="moon_phase == 'third_quarter'" src="../../../../images/third_quarter.png">
         <div class="hours mx-auto">{{ time }}</div>
     </div>
 </template>
 
 <script>
 import Dayjs from 'dayjs'
+/**
+ * It represents a phase of the Moon and the time it will occur.
+ */
 export default {
     props: {
         /**
-         * The moon phase type.
+         * The moon phase.
          * @values new_moon, first_quarter, full_moon, third_quarter
          */
-        type: { // Which moon phase is.
+        type: {
             type: String,
             required: true,
             validator(value) {
@@ -28,7 +31,10 @@ export default {
                 ]
             }
         },
-        timestamp: { // The phase timestamp.
+        /**
+         * The date and time the Moon phase will occur.
+         */
+        timestamp: {
             type: String,
             required: true
         }
@@ -39,7 +45,10 @@ export default {
         }
     },
     computed: {
-        time() { // The time when the phenomenon occurs
+        /**
+         * The time when the phenomenon occurs.
+         */
+        time() {
             return Dayjs(this.timestamp).format('H')
         }
     }

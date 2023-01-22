@@ -1,10 +1,10 @@
 <template>
     <div class="synodic-rhythm">
         <Illumination>
-            <MoonPhase type="new_moon" timestamp="2000-01-01 10:00"></MoonPhase>
-            <MoonPhase type="first_quarter" timestamp="2000-01-07 11:00"></MoonPhase>
-            <MoonPhase type="full_moon" timestamp="2000-01-14 12:00"></MoonPhase>
-            <MoonPhase type="third_quarter" timestamp="2000-01-28 13:00"></MoonPhase>
+            <MoonPhase type="new_moon" timestamp="2023-01-21 21:53"></MoonPhase>
+            <MoonPhase type="first_quarter" timestamp="2023-01-28 16:18"></MoonPhase>
+            <MoonPhase type="full_moon" timestamp="2023-02-05 19:28"></MoonPhase>
+            <MoonPhase type="third_quarter" timestamp="2023-02-13 17:00"></MoonPhase>
         </Illumination>
     </div>
 </template>
